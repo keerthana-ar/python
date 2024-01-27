@@ -1,0 +1,10 @@
+def count_palindrome(sentence):
+    words = sentence.split()
+    palindromes = 0
+    for word in words:
+         if word == word[::-1]:
+             palindromes+=1
+    return palindromes
+
+sentence = input("Enter a random sentence: ")
+count_palindrome(sentence)
