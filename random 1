@@ -1,0 +1,22 @@
+def array_increment(digits):
+     carry = 1
+     result = []
+
+     for digit in reversed(digits):
+         sum = digit + carry
+         result.insert(0,sum % 10)
+         carry = sum//10
+
+     if carry:
+        result.insert(0,carry)
+
+     return result
+
+digits = []
+elements = int(input("Enter the no.of elements in the list: "))
+for i in range(elements):
+    numbers = int(input("Enter the elements: "))
+    digits.append(numbers)
+print(digits)
+
+array_increment(digits)
